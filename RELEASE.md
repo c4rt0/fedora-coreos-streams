@@ -17,6 +17,16 @@ you need to manually create one, you can use the following links:
 - [testing](https://github.com/coreos/fedora-coreos-streams/issues/new?labels=kind/release,jira&title=testing:%20new%20release%20on%20YYYY-MM-DD&template=testing.md)
 - [next](https://github.com/coreos/fedora-coreos-streams/issues/new?labels=kind/release,jira&title=next:%20new%20release%20on%20YYYY-MM-DD&template=next.md)
 
+Alternatively, run the **Create release issues** workflow from the Actions tab.
+Leave the date blank to use the Tuesday two weeks after the current release
+week. Running it on Monday through Friday during the same release week produces
+the same date. Alternatively, enter an approximate release date explicitly.
+The **dry run** option is enabled by default and previews the stable, testing,
+and next issue titles without creating anything. Type `CREATE` as confirmation
+even for a dry run. After reviewing the preview, disable **dry run** and run it
+again to create the issues from their templates. Existing issues with the same
+stream and date are skipped.
+
 ## Pipeline failures & recovery
 
 If a part of a pipeline run fails there may be options available that don't
